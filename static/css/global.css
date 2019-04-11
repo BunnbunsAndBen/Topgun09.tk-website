@@ -1,0 +1,50 @@
+*{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    -webkit-font-smoothing: antialiased;
+}
+body{
+    background-color: #dbecfd;
+    background-image: url('/bg-blue-light.png');
+    background-size: cover;
+}
+.nav-wrapper{
+    padding: 0 16px;
+}
+.nav-logo{
+    max-height: 32px;
+    margin:16px 0;
+}
+.title{
+    font-size: 3.25rem;
+    font-weight: 500;
+    color: #343a40 !important
+}
+.title-2{
+    font-size: 2.875rem;
+    font-weight: 500;
+    color: #343a40 !important
+}
+.header-2{
+    margin:1.75rem 0 .5rem 0;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.header{
+    margin:1.75rem 0 .5rem 0;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+/*--- Media Stuff ---*/
+@media screen and (max-width: 600px){
+    .nav-logo{
+        margin:12px 0;
+    }
+}
