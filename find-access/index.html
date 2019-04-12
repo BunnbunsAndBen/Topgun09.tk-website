@@ -55,13 +55,58 @@
             <p class="left-align">The Topgun09 project is hosted inside the RCSC network and for that reason, is not accessible outside of it without the use of "tunneling".</p>
             <p class="left-align">To access the project, you must use one of the following methods:</p>
             <ol class="left-align">
-                <li>The local IP address (reccomended): <a href="#">here</a></li>
-                <li>The main HTTP tunnel (for use outide school): <a href="#">here</a></li>
-                <li>A proxy (for use if the main tunnel is blocked): <a href="#">here</a></li>
+                <li>The local IP address (reccomended): <span id="local">Loading...</span></li>
+                <li>The main HTTP tunnel (for use outide school): <span id="tunnel">Loading...</span> <i class="material-icons tiny blue-grey-text text-lighten-2 info-icon modal-trigger" data-target="tunnel-info">info</i></li>
+                <li>A proxy (for use if the main tunnel is blocked): <a href="#">(not done)</a></li>
             </ol>
+            <!-- tunnel info modal -->
+            <div id="tunnel-info" class="modal">
+                <div class="modal-content">
+                    <p><b>The current tunnel address will not stay the same.</b></p>
+                    <p>A new tunnel address is created after each startup of the server.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                </div>
+            </div>
+            <hr />
+            <h4 style="margin-bottom:.5rem;">Local Access</h4>
+            <p style="margin:0 0 .75rem 0;">Latest IP address</p>
+                <div id="loading-table" class="center">
+                  <div class="preloader-wrapper small active">
+                    <div class="spinner-layer spinner-blue-only">
+                      <div class="circle-clipper left">
+                        <div class="circle"></div>
+                      </div><div class="gap-patch">
+                        <div class="circle"></div>
+                      </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="local-table">
+                </div>
+            <h4 style="margin-bottom:.5rem;">Tunnel Access</h4>
+            <p style="margin:0 0 .75rem 0;">Latest HTTP tunnel address</p>
+                <div id="loading-table2" class="center">
+                  <div class="preloader-wrapper small active">
+                    <div class="spinner-layer spinner-blue-only">
+                      <div class="circle-clipper left">
+                        <div class="circle"></div>
+                      </div><div class="gap-patch">
+                        <div class="circle"></div>
+                      </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="tunnel-table">
+                </div>
         </div>
+        <br />
     </div>
-    
 <footer id="footer">
   <div class="container-fluid">
     <br />
@@ -74,6 +119,44 @@
   </div>
 </footer>
     <script>
+    getLocal();
+    getTunnel();
+    function getLocal(){
+        // Make request //
+        var xhttp = new XMLHttpRequest(); 
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // Request is complete //
+                document.getElementById("loading-table").style.display ="none";
+                var tmp = JSON.parse(this.responseText);
+                document.getElementById("local-table").innerHTML = '<a href="http://'+tmp[0].ip+'">'+tmp[0].ip+'</a>';
+                document.getElementById("local").innerHTML = '<a href="http://'+tmp[0].ip+'">'+tmp[0].ip+'</a>';
+            }
+        };
+        xhttp.open("GET", "https://topgun09.000webhostapp.com/api.php?json=local", true);
+        xhttp.send();
+    }
+    function getTunnel(){
+        // Make request //
+        var xhttp = new XMLHttpRequest(); 
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // Request is complete //
+                document.getElementById("loading-table2").style.display ="none";
+                var tmp = JSON.parse(this.responseText);
+                document.getElementById("tunnel-table").innerHTML = '<a href="'+tmp.ip+'">'+tmp.ip+'</a>';
+                document.getElementById("tunnel").innerHTML = '<a href="'+tmp.ip+'">'+tmp.ip+'</a>';
+            }
+        };
+        xhttp.open("GET", "https://topgun09.000webhostapp.com/api.php?json=tunnel", true);
+        xhttp.send();
+    }
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+      });
       document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.sidenav');
         var instances = M.Sidenav.init(elems);

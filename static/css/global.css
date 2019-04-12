@@ -7,6 +7,13 @@ body{
     background-image: url('/bg-blue-light.png');
     background-size: cover;
 }
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    height: 1px;
+    background-color: rgba(0,0,0,.12);
+}
 .nav-wrapper{
     padding: 0 16px;
 }
@@ -30,12 +37,12 @@ body{
     font-weight: 300;
 }
 .header{
-    margin:1.75rem 0 .5rem 0;
+    margin: 1.75rem 0 .75rem 0;
     font-size: 1.3rem;
     font-weight: 300;
 }
 .info{
-    margin-top:2.5rem;
+    margin-top:2.25rem;
     padding:1rem;
     min-height: 65vh;
 }
@@ -97,8 +104,16 @@ body{
     line-height: 3;
     margin-left:3px;
 }
-
-
+.info-icon{
+    margin-right: 3px;
+    margin-left: 3px;
+    cursor: help;
+    vertical-align: middle;
+}
+.v-align{
+    display: inline-block;
+    vertical-align: middle;
+}
 
 
 
