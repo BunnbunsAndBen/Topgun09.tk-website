@@ -44,7 +44,7 @@
     <li><a href="/about/">About</a></li>
   </ul>
 <!-- page content -->
-    <div class="page-wapper text-white">
+    <div class="page-wapper">
         <div class="container center">
             <h3 class="title">Topgun09 APIs</h3>
             <p class="header">Here's some REST APIs</p>
@@ -52,11 +52,20 @@
     </div>
     <div class="info bg">
         <div class="container center">
-            <p class="left-align">Most of Topgun09's APIs output JSON. All requests are either GET or POST.</p>
+            <p class="left-align">Most of Topgun09's APIs output JSON. All requests are either GET or POST. Email contact@topgun09.tk about requesting an API with Topgun09 be made for your needs.</p>
             <hr />
-            <h4 style="margin-bottom:.5rem;">Title</h4>
-            <p style="margin:0 0 .75rem 0;">Page not done</p>
-        </div>
+            <h4 style="margin-bottom:.5rem;">Topgun09.tk</h4>
+            <p style="margin:0 0 .75rem 0;font-weight: 500;">The APIs for the current local IP and HTTP tunnel addresses:</p>
+            <div>
+                <p>Returns the local IP address from an database table that gets updated upon every startup:</p>
+                <code>[GET] /api.php?json=local</code>
+                <p>Returns the HTTP tunnel address from an database table that gets updated upon every startup:</p>
+                <code>[GET] /api.php?json=tunnel</code>
+            </div>
+            <hr />
+            <h5>Other APIs</h5>
+            <p class="center">The rest of Topgun09's APIs are in the docs section at <a href="https://topgunurl.tk/docs/">https://topgunurl.tk/docs/</a></p>
+            </div>
         <br />
     </div>
 <footer id="footer">
