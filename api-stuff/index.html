@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Styles -->
+    <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/static/css/global.css" />
+    <title>API Stuff</title>
+    <!-- Meta -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/static/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" color="#1565c0">
+    <link rel="shortcut icon" href="/static/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#1565c0">
+    <meta name="msapplication-config" content="/static/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#1565c0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+    *{
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        -webkit-font-smoothing: antialiased;
+    }
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper blue darken-3">
+      <a href="/" class="brand-logo"><img class="nav-logo" src="/white-logo.png"></a>
+      <a href="/find-access/" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="/find-access/">Access</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="/">Home</a></li>
+    <li><a href="/find-access/">Access</a></li>
+    <li><a href="/about/">About</a></li>
+  </ul>
+<!-- page content -->
+    <div class="page-wapper text-white">
+        <div class="container center">
+            <h3 class="title">Topgun09 APIs</h3>
+            <p class="header">Here's some REST APIs</p>
+        </div>
+    </div>
+    <div class="info bg">
+        <div class="container center">
+            <p class="left-align">Most of Topgun09's APIs output JSON. All requests are either GET or POST.</p>
+            <hr />
+            <h4 style="margin-bottom:.5rem;">Title</h4>
+            <p style="margin:0 0 .75rem 0;">Page not done</p>
+        </div>
+        <br />
+    </div>
+<footer id="footer">
+  <div class="container-fluid">
+    <br />
+    <div>
+        <a href="/"><img class="footer-logo" height="35px" src="/logo-small.png"></a>
+        <a class="footer-text" href="https://github.com/topgun09">© 2019</a>
+        <a class="light-footer-text" href="/old.php">Old Site</a>
+    </div>
+    <br />
+  </div>
+</footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+      });
+    </script>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+</body>
+</html>
