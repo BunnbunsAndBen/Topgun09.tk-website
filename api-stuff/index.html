@@ -23,6 +23,8 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         -webkit-font-smoothing: antialiased;
     }
+	img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+	display: none!important;}
     </style>
 </head>
 <body>
@@ -57,9 +59,9 @@
             <h4 style="margin-bottom:.5rem;">Topgun09.tk</h4>
             <p style="margin:0 0 .75rem 0;font-weight: 500;">The APIs for the current local IP and HTTP tunnel addresses:</p>
             <div>
-                <p>Returns the local IP address from an database table that gets updated upon every startup:</p>
+                <p>Returns the last known local IP address:</p>
                 <code>[GET] /api.php?json=local</code>
-                <p>Returns the HTTP tunnel address from an database table that gets updated upon every startup:</p>
+                <p>Returns the last known HTTP tunnel address:</p>
                 <code>[GET] /api.php?json=tunnel</code>
             </div>
             <hr />
