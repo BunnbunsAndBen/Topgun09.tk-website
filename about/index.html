@@ -26,6 +26,8 @@
     </style>
 </head>
 <body>
+<div class="banner">
+    
   <nav>
     <div class="nav-wrapper blue darken-3">
       <a href="/" class="brand-logo"><img class="nav-logo" src="/white-logo.png"></a>
@@ -88,13 +90,13 @@
         <br />
       </div>
     </footer>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems);
-      });
-    </script>
+  
+    <video autoplay loop muted class="banner__video" poster="/static/video/thumb/plexus.jpg">
+      <source src="https://benworld.net/static/video/plexus.mp4" type="video/mp4">
+    </video>
+  </div>
     <!-- JavaScript -->
     <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/static/js/global.js"></script>
 </body>
 </html>
